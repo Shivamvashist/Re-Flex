@@ -1,4 +1,5 @@
 import {atom} from 'recoil';
+import { recoilPersist } from 'recoil-persist';
 
 export type GamePhase = 'start' | 'waiting' | 'tap' | 'result';
 
@@ -17,7 +18,13 @@ export const timerEndState = atom<number|null>({
     default:null
 })
 
-// export const resultState = atom<number|null>({
-//     key:"resultState",
-//     default:null
-// })
+const { persistAtom } = recoilPersist({
+    key:"leaderboard",
+    storage:localStorage
+})
+
+export const leaderBoardState = atom<number[]>({
+    key:"resultState",
+    default:[],
+    effects_UNSTABLE:[persistAtom],
+});
