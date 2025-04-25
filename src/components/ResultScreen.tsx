@@ -27,7 +27,7 @@ export function ResultScreen(){
         //
     }
     
-    const reactionTime= endTime-startTime;
+    const reactionTime= (endTime ?? 0)-(startTime ?? 0);
 
     
 
