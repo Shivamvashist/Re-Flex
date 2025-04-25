@@ -27,8 +27,8 @@ export function ResultScreen(){
         //
     }
     
-    const reactionTime= (endTime ?? 0)-(startTime ?? 0);
-
+    const reactionTimeDraft = (endTime ?? 0)-(startTime ?? 0);
+    const reactionTime = Math.floor(reactionTimeDraft);
     
 
     useEffect(()=>{
