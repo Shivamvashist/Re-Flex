@@ -12,3 +12,7 @@ export function WaitingScreen(){
     </div>
 
 }
+
+function endWait(){
+    
+}
