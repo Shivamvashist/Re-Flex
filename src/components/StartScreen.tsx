@@ -38,7 +38,7 @@ export function StartScreen(){
             whileTap={{ scale: 0.9 }}
             onMouseDown={playClickSound}
             onClick={()=>{handleStart()}}
-            className="bg-blue-600 px-6 py-3 text-lg rounded-lg shadow-md hover:bg-blue-700"
+            className="bg-blue-600 px-6 py-3 text-lg rounded-lg shadow-md font-bold hover:bg-blue-700"
           >
             Start Game
           </motion.button>
